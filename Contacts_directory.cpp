@@ -24,10 +24,9 @@ struct TrieNode
 		// Initialize all the Trie nodes with NULL
 		for (int i = 65; i <= 122; i++)
 		{
-            char c=i;
+            		char c=i;
 			child[c] = NULL;
-        }
-        //child[a]=NULL;
+       		 }
 		isLast = false;
 		toReverse=false;
 	}
@@ -70,11 +69,11 @@ void insert(string name,bool toReverse)
 			itr->isLast = true;
 			if(toReverse==true)
 			{
-                itr->toReverse = true;
+                		itr->toReverse = true;
 			}
         }
 
-	}
+     }
 }
 
 // This function simply displays all dictionary words
@@ -103,7 +102,7 @@ void displayContactsUtil(TrieNode *curNode, string prefix)
             return ch == '_' ? ' ' : ch;
             });
             cout << prefix << endl;
-		}
+	}
     }
 
 	// Find all the adjacent Nodes to the current
@@ -126,10 +125,10 @@ void displayContacts(string str)
 
 	string prefix = "";
 	int len = str.length();
-    bool nodeFound=true;
+   	bool nodeFound=true;
 
-    // Bring the node pointer to the last element
-    // of prefix if exists
+   	 // Bring the node pointer to the last element
+   	 // of prefix if exists
 	for (int i=0; i<len; i++)
 	{
 		// 'prefix' stores the string formed so far
@@ -147,7 +146,7 @@ void displayContacts(string str)
 		// no more prefixes are going to be present.
 		if (curNode == NULL)
 		{
-            nodeFound=false;
+            		nodeFound=false;
 			cout << "\n No Results Found for  " << str<<endl<<endl;
 			break;
 		}
