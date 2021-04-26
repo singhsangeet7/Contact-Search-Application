@@ -1,3 +1,5 @@
+// Assumption: Input string should can/should only be [A-Z][a-z] and can be space seprated
+
 // C++ Program to Implement a Contact Add/Search
 // Using Trie Data Structure
 #include <bits/stdc++.h>
