@@ -59,8 +59,10 @@ How Code Works
 
 
 Handling User Input Errors:
-*If searching is applied before inserting any string, code simply gives warning.
-*If any other input is provided other than 1,2,3 code again gives warning.
+
+1) *If searching is applied before inserting any string, code simply gives warning.
+2) *If any other input is provided other than 1,2,3 code again gives warning.
+3) *To exit user need to enter 3.
     
     
 
