@@ -10,16 +10,16 @@ Instructions to Run Code:
 
 Test Cases:
 
-1
-Enter Name: sam curran
-1
-Enter Name: tom curran
-2
-Enter Name to Search : cur
-tom curran
-sam curran
-2
-Enter Name to Search : sa
-sam curran
-1
+    1
+    Enter Name: sam curran
+    1
+    Enter Name: tom curran
+    2
+    Enter Name to Search : cur
+    tom curran
+    sam curran
+    2
+    Enter Name to Search : sa
+    sam curran
+    1
 
