@@ -24,10 +24,9 @@ struct TrieNode
 		// Initialize all the Trie nodes with NULL
 		for (int i = 65; i <= 122; i++)
 		{
-            char c=i;
+            		char c=i;
 			child[c] = NULL;
-        }
-        //child[a]=NULL;
+        	}
 		isLast = false;
 		toReverse=false;
 	}
@@ -70,9 +69,9 @@ void insert(string name,bool toReverse)
 			itr->isLast = true;
 			if(toReverse==true)
 			{
-                itr->toReverse = true;
+                		itr->toReverse = true;
 			}
-        }
+        	}
 
 	}
 }
