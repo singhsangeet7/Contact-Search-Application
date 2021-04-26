@@ -15,7 +15,7 @@ struct TrieNode
 	// end of a contact
 	bool isLast;
 	// 'toReverse' is true if string has both first and
-	// last name sperated by space
+	// last name separated by space
 	bool toReverse;
 
 	// Default Constructor
