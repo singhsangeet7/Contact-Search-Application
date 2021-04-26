@@ -24,9 +24,10 @@ struct TrieNode
 		// Initialize all the Trie nodes with NULL
 		for (int i = 65; i <= 122; i++)
 		{
-            		char c=i;
+            char c=i;
 			child[c] = NULL;
-       		 }
+        }
+        //child[a]=NULL;
 		isLast = false;
 		toReverse=false;
 	}
@@ -69,11 +70,11 @@ void insert(string name,bool toReverse)
 			itr->isLast = true;
 			if(toReverse==true)
 			{
-                		itr->toReverse = true;
+                itr->toReverse = true;
 			}
         }
 
-     }
+	}
 }
 
 // This function simply displays all dictionary words
@@ -90,18 +91,18 @@ void displayContactsUtil(TrieNode *curNode, string prefix)
         // if exists reverse both last and first name to get orignal order
 	    if(curNode->toReverse)
 	    {
-            int index;
-            index = prefix.find_last_of("_");
-            string first_name = prefix.substr(index+1);
-            string last_name=prefix.substr(0, index);
-            string last_first_name=first_name+" "+last_name;
-            cout <<last_first_name<<endl;
-        }
-        else{
-            transform(prefix.begin(), prefix.end(), prefix.begin(), [](char ch) {
-            return ch == '_' ? ' ' : ch;
-            });
-            cout << prefix << endl;
+	    int index;
+	    index = prefix.find_last_of("_");
+	    string first_name = prefix.substr(index+1);
+	    string last_name=prefix.substr(0, index);
+	    string last_first_name=first_name+" "+last_name;
+	    cout <<last_first_name<<endl;
+	    }
+	   else{
+	       transform(prefix.begin(), prefix.end(), prefix.begin(), [](char ch) {
+	       return ch == '_' ? ' ' : ch;
+	      });
+	    cout << prefix << endl;
 	}
     }
 
@@ -127,8 +128,8 @@ void displayContacts(string str)
 	int len = str.length();
    	bool nodeFound=true;
 
-   	 // Bring the node pointer to the last element
-   	 // of prefix if exists
+    	// Bring the node pointer to the last element
+    	// of prefix if exists
 	for (int i=0; i<len; i++)
 	{
 		// 'prefix' stores the string formed so far
@@ -146,7 +147,7 @@ void displayContacts(string str)
 		// no more prefixes are going to be present.
 		if (curNode == NULL)
 		{
-            		nodeFound=false;
+           		nodeFound=false;
 			cout << "\n No Results Found for  " << str<<endl<<endl;
 			break;
 		}
@@ -155,7 +156,7 @@ void displayContacts(string str)
     // pass node pointer pointing to last char of prefix
     // performing dfs after that char for suggestions
     if(nodeFound){
-        cout << "\n Suggestions based on prefix   " << prefix<<endl;
+        cout << "\nSuggestions based on input name -->  " << prefix<<endl;
         displayContactsUtil(curNode, prefix);
     }
 }
@@ -164,11 +165,12 @@ void displayContacts(string str)
 int main()
 {
 
-    cout<<endl<<":::::::::::: WELCOME TO CONTACT DIRECTORY :::::::::::::::::"<<endl<<endl;
+    cout<<endl<<":::::::::::: WELCOME TO CONTACT DIRECTORY :::::::::::::::::"<<endl;
+    // to initialise root node for first insert
     bool flag=true;
     while(1)
     {
-        cout<<endl<<" 1) Add contact 2) Search 3) Exit "<<endl;
+        cout<<endl<<" 1) Add contact 2) Search Contact 3) Exit "<<endl;
         int option;
         cin>>option;
         cout<<endl;
